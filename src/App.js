@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
 class App extends Component {
-  constructor() {
+  costrutcer() {
     super()
     this.state = {
       pokemon: [],
-      search: "",
+      search: ""
       selectedPokemon: null
     }
   }
@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   selectPokemon = async (name) => {
-    const res = 
+    const pokemon = 
       await fetch(
         `https://pokeapi.co/api/v2/pokemon/${name}/`,
         {cache: "force-cache"})
@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   render() {
-    const results = this.generateSearchResults(this.state.search)
+    const results = this.generateSearchResults(state.search)
 
     return (
       <div className="App">
