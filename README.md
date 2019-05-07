@@ -20,6 +20,8 @@ https://reactjs.org/
 ## Development Setup
 1. Install StandardJS: <https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs>
 
+1a. If you dont have VSCode, you can use the instructions for your editor here <https://standardjs.com/>
+
 
 ## Hello World Example
 
