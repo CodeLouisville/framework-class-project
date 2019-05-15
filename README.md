@@ -1,6 +1,6 @@
 # Week 2
 
-## Getting Setup
+## Catching up
 
 1. `git add .`
 2. `git commit -m "my work"`
