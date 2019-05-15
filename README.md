@@ -10,7 +10,7 @@
 
 - Object Oriented Programming
 - Understanding This
-- Understanding JS Conditionalss
+- Understanding JS Conditionals
 
 ## Further Information
 
