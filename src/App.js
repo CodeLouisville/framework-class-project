@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class App extends Component {
+  // Classes must have constructors if initial variables are to be set automatically
   constructor () {
     super();
     this.state = {
@@ -13,6 +14,7 @@ class App extends Component {
     };
   }
 
+  // Class based method to log out all people over 18
   getOldPeople () {
     let people = this.state.people;
     let olds = [];
@@ -24,6 +26,7 @@ class App extends Component {
     return olds;
   }
 
+  // Method to render a div countaining the name and age of the youngest person in the states people array
   getYoungest () {
     let people = this.state.people;
     let youngest = people[0];
