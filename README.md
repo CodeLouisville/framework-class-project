@@ -4,33 +4,47 @@
 
 1. `git add .`
 2. `git commit -m "my work"`
-3. `git checkout week2`
+3. `git checkout master`
 
 ## This Weeks Overview
 
-- Array Functions
-  - Map
-  - Filter
-  - Find
-- React State
-- Displaying Arrays in React
+- Object Oriented Programming
+- Understanding This
+- Understanding JS Conditionals
 
-## Array Functions
+## Further Information
 
 A great website to just play around with a bunch of different languages
-is https://repl.it. Today we are going to use it to demo our Array Functions.
+is <https://repl.it.> Today we are going to use it to demo the topics.
 
-- [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [Array.filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-- [Array.find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class)
+- [This](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [If / Else](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 
-## React Components/Props/State Reading
+```javascript
+class Person{
+  constructor(name="New Name", age="20"){
+    this._name = name
+    this._age = age
+  }
 
-- https://reactjs.org/docs/components-and-props.html
-- https://reactjs.org/docs/state-and-lifecycle.html
-- https://reactjs.org/docs/faq-state.html
-- https://reactjs.org/docs/react-component.html
+  getName(){
+    return this._name
+  }
 
-## Displaying Arrays in React
+  setName(name){
+    if(name.length >= 2){
+      this._name = name
+    }
+  }
+
+  getAge(age){
+    return this._age
+  }
+}
+
+```
+
 
 _Inclass Demo Time!!!_
