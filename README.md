@@ -1,4 +1,4 @@
-# Week 3 - 9.27.2018
+# Week 3
 
 ## House Keeping
 
@@ -6,25 +6,56 @@
 2. Make sure you know how to get to your Projects when you create them on
    your computer.
 
-## Lets get setup first!!
+## Lets get caught ups first!!
 
-`git checkout -f week3`.
+`git checkout -f week2`.
 
 This will blow away all your changes, so if there is something you want to keep for later go ahead and commit it and remove the `-f` from your command.
 
-## What are Components?
+## What are Callback Functions?
 
-First lets talk about what components are in terms of “theory” before we dig into how React Implements a component.
+First lets talk about Callback Functions and when to use them.
+
+## ES2015
+
+ES2015 Syntax.
+
+Below is a link to the list of every blog post by Mozilla that talk about
+features that were added to Javascript in the ES6 release. Pace yourself its a
+lot of content, but if you just can't get enough!
+
+1. <https://hacks.mozilla.org/category/es6-in-depth/>
 
 ## Lets Get Started!
 
-This is a summary of what we will be doing, but its _best to be in class_ to get the detailed play by play. You can see the end result in week4!
+return to <https://reple.it> to test out ES6 stuffs
 
-1. Create Two Components: `People` and `Person`.
-2. Work from the ground up with components, start with the smallest building blocks. Its alright if you work from the top to bottom as well, up to you. Can you guess which component is the smallest building block?
-3. Output an `li` in the Person component that display a `name` passed as a prop.
-4. Create the `People` component with state that contains a list of people and iterates over the list using `map` to return a list of `Person` components.
-5. Bonus: Let the user update the name of the person! Think of the absolute easiest way to do this!!
+```JavaScript
+students = [
+  {"name":"Alex", "grade":81},
+  {"name":"Lucas", "grade":93},
+  {"name":"Dvontre", "grade":71}
+]
+
+// Function that loops over students 
+// checks passing based on grades
+function checkPass(student){
+  if(student.grade >= 70){
+    console.log(`${student.name} is passing!`)
+  }
+  else console.log(`${student.name} is not passing..`)
+}
+
+// loops through and logs out each student
+students.forEach((student) =>{
+  console.log(student)
+})
+
+// calls checkPass on each student
+students.forEach(checkPass)
+
+```
+
 
 # New Reading
 
@@ -53,8 +84,4 @@ inside and out. The one you will use the most is map.
 
 # Bonus Reading
 
-Below is a link to the list of every blog post by Mozilla that talk about
-features that were added to Javascript in the ES6 release. Pace yourself its a
-lot of content, but if you just can't get enough!
 
-1. https://hacks.mozilla.org/category/es6-in-depth/
