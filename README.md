@@ -15,7 +15,7 @@ This will blow away all your changes, so if there is something you want to keep 
 ## What are Callback Functions?
 
 Here is a link to a resource for learning more about callback functions
-[Callback Functions] (<https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks)>
+[Callback Functions] (https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks)
 
 ## ES2015
 
@@ -35,7 +35,7 @@ return to <https://reple.it> to test out ES6 stuffs
 students = [
   {"name":"Alex", "grade":81},
   {"name":"Lucas", "grade":93},
-  {"name":"Dvontre", "grade":71}
+  {"name":"Dave", "grade":68}
 ]
 
 // Function that loops over students 
@@ -55,8 +55,23 @@ students.forEach((student) =>{
 // calls checkPass on each student
 students.forEach(checkPass)
 
-```
+// loops over each student and creates a new array of students with a grade of 80 or higher
+honors = students.filter((student) =>{
+  return student.grade > 80
+})
 
+console.log(honors)
+
+let nums = [2,3,4]
+
+// Loops over each num and creates a new array of each number squared
+let squares = nums.map(function(num){
+  return num * num
+})
+
+console.log(nums)
+console.log(squares)
+```
 
 # New Reading
 
@@ -82,7 +97,3 @@ It's not going away, might as well make sure you know how to use Array functions
 inside and out. The one you will use the most is map.
 
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-
-# Bonus Reading
-
-
