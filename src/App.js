@@ -1,31 +1,51 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class App extends Component {
-  constructor() {
+  // Classes must have constructors if initial variables are to be set automatically
+  constructor () {
     super();
     this.state = {
+      greeting: 'We did it!',
       people: [
-        { name: "Sally W.", age: 23 },
-        { name: "Rick S.", age: 30 },
-        { name: "Samantha T.", age: 52 }
+        { name: 'Alex', age: 21 },
+        { name: 'Ben', age: 18 },
+        { name: 'Abe', age: 31 }
       ]
     };
   }
 
-  render() {
-    const { people } = this.state;
+  // Class based method to render each person's name and age
+  getPeople () {
+    let people = this.state.people;
+    return people.map(function (person) {
+      return (
+        <div key={person.name}>
+          <h2>{person.name}</h2>
+          <p>{person.age}</p>
+        </div>
+      );
+    });
+  }
+
+  // Method to render a div countaining the name and age of the youngest person in the state's people array
+  getYoungest () {
+    let people = this.state.people;
+    let youngest = people[0];
+    for (let i = 0; i < people.length; i++) {
+      if (people[i].age < youngest.age) {
+        youngest = people[i];
+      }
+    }
     return (
-      <div className="App">
-        <h1> People - Names </h1>
-        <ul className="people">
-          {people.map(person => (
-            <li className="person">
-              <input type="text" value={person.name} />
-            </li>
-          ))}
-        </ul>
+      <div>
+        <h1>{youngest.name}</h1>
+        <p>{youngest.age}</p>
       </div>
     );
+  }
+
+  render () {
+    return <div>{this.getPeople()}</div>;
   }
 }
 
