@@ -27,7 +27,7 @@ class App extends Component {
     });
   }
 
-  // Method to render a div countaining the name and age of the youngest person in the state's people array
+  // Method to render a div containing the name and age of the youngest person in the state's people array
   getYoungest () {
     let people = this.state.people;
     let youngest = people[0];
