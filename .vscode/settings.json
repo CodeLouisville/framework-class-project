@@ -3,6 +3,9 @@
   "editor.formatOnSave": false,
   "standard.autoFixOnSave": true,
   "standard.usePackageJson": true,
+  "standard.options": {
+    "parser": "babel-eslint",
+  },
   "standard.validate": [
     "javascript",
     "javascriptreact",
