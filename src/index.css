@@ -1,14 +1,47 @@
 body {
   margin: 0;
-  padding: 10px;
   font-family: sans-serif;
 }
-.people {
-  margin: 0;
-  padding: 10px;
-  list-style: none;
+
+.App {
+  display: flex;
 }
 
-.people .person {
-  padding-bottom: 10px;
+.App > div {
+  flex: 1;
+}
+
+.App .search {
+  padding: 10px;
+}
+
+.App .search input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.App .search ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App .search ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.App .search ul li:nth-child(odd) {
+  background-color: #e5e5e5;
+}
+
+.App .search ul li:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.App .result {
+  padding: 10px;
+  background-color: #e5e5e5;
 }

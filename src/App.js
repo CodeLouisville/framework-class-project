@@ -4,7 +4,9 @@ import People from './People';
 class App extends Component {
   // Classes must have constructors if initial variables are to be set automatically
   constructor() {
+    // calls the constructor for the parent (Component) class
     super();
+    // sets the initail state to include these items
     this.state = {
       nameInput: '',
       ageInput: '',
@@ -72,4 +74,5 @@ class App extends Component {
   }
 }
 
+// Exports the App to be usable by other components in the app
 export default App;
