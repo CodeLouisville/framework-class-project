@@ -1,4 +1,4 @@
-# Week 3
+# Week 5
 
 ## House Keeping
 
@@ -6,72 +6,25 @@
 2. Make sure you know how to get to your Projects when you create them on
    your computer.
 
-## Lets get caught ups first!!
+## Lets get setup first!!
 
-`git checkout -f week2`.
+`git checkout -f week4`.
 
 This will blow away all your changes, so if there is something you want to keep for later go ahead and commit it and remove the `-f` from your command.
 
-## What are Callback Functions?
+## What are Components?
 
-Here is a link to a resource for learning more about callback functions
-[Callback Functions] (https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Declaring_and_Using_Callbacks)
-
-## ES2015
-
-ES2015 Syntax.
-
-Below is a link to the list of every blog post by Mozilla that talk about
-features that were added to Javascript in the ES6 release. Pace yourself its a
-lot of content, but if you just can't get enough!
-
-1. <https://hacks.mozilla.org/category/es6-in-depth/>
+First lets talk about what components are in terms of “theory” before we dig into how React Implements a component.
 
 ## Lets Get Started!
 
-return to <https://reple.it> to test out ES6 stuffs
+This is a summary of what we will be doing, but its _best to be in class_ to get the detailed play by play. You can see the end result in week5!
 
-```JavaScript
-students = [
-  {"name":"Alex", "grade":81},
-  {"name":"Lucas", "grade":93},
-  {"name":"Dave", "grade":68}
-]
-
-// Function that loops over students 
-// checks passing based on grades
-function checkPass(student){
-  if(student.grade >= 70){
-    console.log(`${student.name} is passing!`)
-  }
-  else console.log(`${student.name} is not passing..`)
-}
-
-// loops through and logs out each student
-students.forEach((student) =>{
-  console.log(student)
-})
-
-// calls checkPass on each student
-students.forEach(checkPass)
-
-// loops over each student and creates a new array of students with a grade of 80 or higher
-honors = students.filter((student) =>{
-  return student.grade > 80
-})
-
-console.log(honors)
-
-let nums = [2,3,4]
-
-// Loops over each num and creates a new array of each number squared
-let squares = nums.map(function(num){
-  return num * num
-})
-
-console.log(nums)
-console.log(squares)
-```
+1. Create Two Components: `People` and `Person`.
+2. Work from the ground up with components, start with the smallest building blocks. Its alright if you work from the top to bottom as well, up to you. Can you guess which component is the smallest building block?
+3. Output an `` in the Person component that display a `name` passed as a prop.
+4. Create the `People` component with state that contains a list of people and iterates over the list using `map` to return a list of `Person` components.
+5. Bonus: Let the user Create or Remove People! Think of the absolute easiest way to do this!!
 
 # New Reading
 
@@ -97,3 +50,11 @@ It's not going away, might as well make sure you know how to use Array functions
 inside and out. The one you will use the most is map.
 
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+# Bonus Reading
+
+Below is a link to the list of every blog post by Mozilla that talk about
+features that were added to Javascript in the ES6 release. Pace yourself its a
+lot of content, but if you just can't get enough!
+
+1. https://hacks.mozilla.org/category/es6-in-depth/
