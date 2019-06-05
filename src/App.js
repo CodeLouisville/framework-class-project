@@ -21,7 +21,6 @@ class App extends Component {
   addPerson = (event) => {
     event.preventDefault();
     const { people } = this.state;
-    // const people = this.state.people;
 
     const person = {
       name: this.state.nameInput,
