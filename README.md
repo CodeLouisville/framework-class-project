@@ -54,7 +54,7 @@ inside and out. The one you will use the most is map.
 # Bonus Reading
 
 Below is a link to the list of every blog post by Mozilla that talk about
-features that were added to Javascript in the ES6 release. Pace yourself its a
+features that were added to Javascript in the ES6 release. Pace yourself it's a
 lot of content, but if you just can't get enough!
 
 1. https://hacks.mozilla.org/category/es6-in-depth/
