@@ -6,10 +6,10 @@ class App extends Component {
   constructor() {
     // calls the constructor for the parent (Component) class
     super();
-    // sets the initail state to include these items
+    // sets the initial state to include these items
     this.state = {
       nameInput: '',
-      ageInput: '',
+      ageInput: 21,
       people: [
         { name: 'Alex', age: 21 },
         { name: 'Ben', age: 18 },
@@ -18,47 +18,42 @@ class App extends Component {
     };
   }
 
+  // Function used to add a person to the state's people array
   addPerson = (event) => {
     event.preventDefault();
-    const { people } = this.state;
-    // const people = this.state.people;
-
+    const people = this.state.people.slice();
     const person = {
       name: this.state.nameInput,
       age: this.state.ageInput
     };
 
     people.push(person);
-    this.setState({ people, nameInput: '', ageInput: '' });
+    this.setState({ people, nameInput: '', ageInput: 38 });
   };
 
+  // Function used to remove people from the state's people array  
   deletePerson = (index) => {
-    const { people } = this.state;
-    people.splice(index, 1);
+    // filters out the people array removing the element with the passed index
+    const people = this.state.people.filter((person, i) => i !== index)
     this.setState({ people });
   };
 
+  // returns a form with a name and age input
   renderForm() {
     return (
       <form onSubmit={this.addPerson}>
         <label>Name: </label>
-        <input type='text' id='name' value={this.state.nameInput} onChange={(event) => {
-          this.setState({ nameInput: event.target.value });
-        }}
-        />
+        <input type="text" value={this.state.nameInput} onChange={this.onNameChange} /><br />
         <label>Age: </label>
-        <input type='text' id='age' value={this.state.ageInput} onChange={(event) => {
-          this.setState({ ageInput: event.target.value });
-        }}
-        />
-        <input type='submit' />
+        <input type="number" value={this.state.ageInput} onChange={this.onAgeChange} />
+        <input type="submit" />
       </form>
     );
   }
 
-  // Method to render a div containing the name and age of the youngest person in the state's people array
+  // Method to render a span containing the name and age of the youngest person in the state's people array
   getYoungest() {
-    let youngest = this.state.people.reduce((max, p) => p.age < max.age ? p : max, this.state.people[0]);
+    let youngest = this.state.people.reduce((min, p) => p.age < min.age ? p : min, this.state.people[0]);
     return <span>{youngest.name}: Age {youngest.age}</span>
   }
 
