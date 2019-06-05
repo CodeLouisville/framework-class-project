@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     // calls the constructor for the parent (Component) class
     super();
-    // sets the initail state to include these items
+    // sets the initial state to include these items
     this.state = {
       nameInput: '',
       ageInput: '',
