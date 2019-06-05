@@ -58,7 +58,7 @@ class App extends Component {
 
   // Method to render a div containing the name and age of the youngest person in the state's people array
   getYoungest() {
-    let youngest = this.state.people.reduce((max, p) => p.age < max.age ? p : max, this.state.people[0]);
+    let youngest = this.state.people.reduce((max, p) => (p.age < max.age) ? p : max, this.state.people[0]);
     return <span>{youngest.name}: Age {youngest.age}</span>
   }
 
