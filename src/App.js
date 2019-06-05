@@ -38,6 +38,18 @@ class App extends Component {
     this.setState({ people });
   };
 
+  // Event called When the name input is changed
+  onNameChange = (event) => {
+    // updates the state to match the event target value
+    this.setState({ nameInput: event.target.value });
+
+  }
+
+  // event called when the age input is changed
+  onAgeChange = event => {
+    this.setState({ ageInput: event.target.value });
+  }
+
   // returns a form with a name and age input
   renderForm() {
     return (
@@ -54,9 +66,10 @@ class App extends Component {
   // Method to render a span containing the name and age of the youngest person in the state's people array
   getYoungest() {
     let youngest = this.state.people.reduce((max, p) => (p.age < max.age) ? p : max, this.state.people[0]);
-    urn <span>{youngest.name}: Age {youngest.age}</span>
-              
-   
+    return <span>{youngest.name}: Age {youngest.age}</span>
+  }
+
+
   render() {
     return (
       <div>
