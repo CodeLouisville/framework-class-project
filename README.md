@@ -22,7 +22,7 @@ This is a summary of what we will be doing, but its _best to be in class_ to get
 
 1. Create Two Components: `People` and `Person`.
 2. Work from the ground up with components, start with the smallest building blocks. Its alright if you work from the top to bottom as well, up to you. Can you guess which component is the smallest building block?
-3. Output an `` in the Person component that display a `name` passed as a prop.
+3. Output as div in the Person component that display a `name` passed as a prop.
 4. Create the `People` component with state that contains a list of people and iterates over the list using `map` to return a list of `Person` components.
 5. Bonus: Let the user Create or Remove People! Think of the absolute easiest way to do this!!
 
