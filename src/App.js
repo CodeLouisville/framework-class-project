@@ -55,7 +55,6 @@ class App extends Component {
   onNameChange = (event) => {
     // updates the state to match the event target value
     this.setState({ nameInput: event.target.value });
-
   }
 
   // event called when the age input is changed
