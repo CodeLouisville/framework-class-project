@@ -1,8 +1,15 @@
-# Week 5 (October 11th 2018)
+# Week 6
 
-## Reset Your Project
-`git checkout -f week6`
+## Get Caught up
+
+`git checkout -f week5`
+`git pull` to get any updates
 
 
-## Your Task!
-FIX THE ERRORS!
+## AJAX and APIs reading
+
+(AJAX and APIs) [<https://reactjs.org/docs/faq-ajax.html>]
+
+## Routing
+
+(React Router) [<https://reach.tech/router>]
