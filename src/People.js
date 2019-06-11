@@ -5,7 +5,7 @@ const People = ({ people, deletePerson }) => {
   return people.map(function (person) {
     console.log(person.cell)
     return (
-      < div className="people" >
+      <div className="people">
         <Person person={person} deletePerson={deletePerson} />
       </div >
     );
