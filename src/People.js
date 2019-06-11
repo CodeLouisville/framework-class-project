@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Person from './Person';
-const People = (props) => {
-  let people = props.people;
-  return people.map(function (person, index) {
+const People = ({ people, deletePerson }) => {
+  return people.map(function (person) {
+    console.log(person.cell)
     return (
-      <div className="people">
-        <Person index={index} person={person} deletePerson={props.deletePerson} />
-      </div>
+      < div className="people" >
+        <Person person={person} deletePerson={deletePerson} />
+      </div >
     );
   });
 };
