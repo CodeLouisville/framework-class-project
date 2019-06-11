@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   // Event called When the name input is changed
-  onNameChange = (event) => {
+    onNameChange = (event) => {
     // updates the state to match the event target value
     this.setState({ nameInput: event.target.value });
   }
