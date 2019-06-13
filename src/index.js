@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom'
 
-ReactDOM.render(<App greeting="hello Justin" />, document.getElementById('root'));
+ReactDOM.render(
+    <BrowserRouter>
+        <App greeting="hello Justin" />
+    </BrowserRouter>
+    , document.getElementById('root'));
 registerServiceWorker();
